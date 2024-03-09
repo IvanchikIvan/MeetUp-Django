@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Главная</title>
+    <link rel="stylesheet" href="{% static "css/index.css" %}"/> <link
+    rel="stylesheet" href="{% static "css/scroll.css" %}"/>
+  </head>
+  <body>
+    <nav>
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__link" href="">
+            <div class="nav__img__container noactive">
+              <img src="{% static 'resources/menu.svg' %}" alt="Меню" />
+            </div>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="">
+            <div class="nav__img__container active">
+              <img src="{% static 'resources/home.svg' %}" alt="Главная" />
+            </div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <div class="main__container">
+        <header>
+          <div class="group">
+            <div id="logo">Название</div>
+            <div class="inputWrapper">
+              <div class="input__icon">
+                <img src="{% static 'resources/search.svg' %}" alt="Поиск" />
+              </div>
+              <input
+                id="input"
+                type="search"
+                autocomplete="off"
+                spellcheck="false"
+                aria-controls="matches"
+                placeholder="Введи название"
+                aria-expanded="false"
+                aria-live="polite"
+              />
+            </div>
+          </div>
+          <div class="group__icon">
+            <ul class="group__icon__list">
+              <li class="group__icon__item">
+                <a class="group__icon__link" href="">
+                  <div class="icon">
+                    <img
+                      src="{% static 'resources/settings.svg' %}"
+                      alt="Настройки"
+                    />
+                  </div>
+                </a>
+              </li>
+              <li class="group__icon__item">
+                <a class="group__icon__link" href="">
+                  <div class="icon">
+                    <img
+                      src="{% static 'resources/account.svg' %}"
+                      alt="Аккаунт"
+                    />
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </header>
+        <div class="content"></div>
+      </div>
+    </main>
+  </body>
+</html>

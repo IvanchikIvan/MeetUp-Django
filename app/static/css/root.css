@@ -1,0 +1,10 @@
+:root {
+    --dark_color_font: #1C1C1E;
+    --page_background_color: #F3F7FC;
+    --nav_active_background_color: #CBF0F8;
+    --nav_noactive_background_color: #ECEEF3;
+    --input_background_color: #F3F7FC;
+    --icon_background_color: #F3F7FC;
+    --page_padding: 24px 16px 16px 0;
+    --base_border_radius: 24px;
+}
