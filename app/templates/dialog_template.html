@@ -1,0 +1,27 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}Страница с диалоговым окном{% endblock %}
+
+{% block styles %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static "css/dialog.css" %}"/>
+{% endblock %}
+
+{% block content %}
+
+<button id="open-dialog-btn">Открыть диалог</button>
+
+<div id="dialog-overlay">
+    <div id="dialog-box">
+        <h2>окошко</h2>
+        <p>информация об окошке</p>
+        <button id="close-dialog-btn">Закрыть</button>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+    {% load static %}
+    <script src="{% static 'js/dialog.js' %}"></script>
+{% endblock %}
+
