@@ -1,0 +1,24 @@
+{% extends 'base_generic.html' %}
+{% block styles %}
+    {% load static %}
+{% endblock %}
+{% block content %}
+ <nav>
+        <ul class="nav__list">
+            <li class="nav__item">
+                <a class="nav__link" href="">
+                    <div class="nav__img__container noactive">
+                        <img src="{% static 'resources/menu.svg' %}" alt="Меню">
+                    </div>
+                </a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="">
+                    <div class="nav__img__container active">
+                        <img src="{% static 'resources/home.svg' %}" alt="Главная">
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </nav>
+{% endblock %}
