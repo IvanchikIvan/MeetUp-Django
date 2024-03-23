@@ -1,17 +1,19 @@
 {% extends 'base_generic.html' %}
 
 {% block title %}
-    Главная
+Главная
 {% endblock %}
 
 {% block styles %}
     {% load static %}
-    <link rel="stylesheet" href="{% static "css/index.css" %}"/>
-    <link rel="stylesheet" href="{% static "css/scroll.css" %}"/>
+    <link rel="stylesheet" href="{% static  'css/index.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/scroll.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/modal_account.css' %}"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 {% endblock %}
 
 {% block content %}
-    {% include 'nav.html' %}
+    {% include "nav.html" %}
     <main>
         <div class="main__container">
             <header>
@@ -23,7 +25,8 @@
                         <div class="input__icon">
                             <img src="{% static 'resources/search.svg' %}" alt="Поиск">
                         </div>
-                        <input id="input" type="search" autocomplete="off" spellcheck="false" aria-controls="matches" placeholder="Введи название" aria-expanded="false" aria-live="polite">
+                        <input id="input" type="search" autocomplete="off" spellcheck="false" aria-controls="matches"
+                               placeholder="Введи название" aria-expanded="false" aria-live="polite">
                     </div>
                 </div>
                 <div class="group__icon">
@@ -36,12 +39,17 @@
                                 </div>
                             </a>
                         </li>
-                        <li class="group__icon__item">
-                            <a class="group__icon__link" href="">
+                        <li class="group__icon__item" id="account">
+                            <a class="group__icon__link">
                                 <div class="icon">
                                     <img src="{% static 'resources/account.svg' %}" alt="Аккаунт">
                                 </div>
                             </a>
+                            <div class="account-modal">
+                                <input type="text" placeholder="Логин">
+                                <input type="password" placeholder="Пароль">
+                                <button>Войти</button>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -50,4 +58,7 @@
             </div>
         </div>
     </main>
+{% endblock %}
+{% block scripts %}
+    <script src="{% static 'js/modal_account.js' %}"></script>
 {% endblock %}

@@ -1,0 +1,37 @@
+.account-modal {
+  position: absolute;
+  top: calc(100% + 20px);
+  left: calc(-100% - 20px);
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  display: none;
+}
+
+.account-modal.active {
+  display: block;
+}
+
+.account-modal input[type="text"],
+.account-modal input[type="password"] {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.account-modal button {
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.account-modal button:hover {
+  background: #0056b3;
+}
