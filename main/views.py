@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
+import json
 
 
 def home_view(request):
@@ -74,4 +75,13 @@ def handle_404(request, exception):
 
 
 def create_meet(request):
-    return render(request, 'meet.html')
+    with open('main/static/form_resources/features.json', 'r') as file:
+        features = json.load(file)
+    with open('main/static/form_resources/cuisine.json', 'r') as file:
+        cuisine = json.load(file)
+
+    context = {
+        'features': features,
+        'cuisines': cuisine
+    }
+    return render(request, 'meet.html', context)

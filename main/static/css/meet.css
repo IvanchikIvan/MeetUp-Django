@@ -1,16 +1,16 @@
 .content {
-    width: 85%;
-    margin: 0 auto;
+  width: 85%;
+  margin: 0 auto;
 }
 
 .create-meet__body {
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
 }
 
 .create-meet__body * h2 {
-    font-size: 130%;
+  font-size: 130%;
 }
 
 .create-meet__header {
@@ -87,77 +87,103 @@
 }
 
 .members {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
 .member {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
 }
 
 .member__info {
-    display: flex;
-    align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    padding: 5px 10px;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 5px 10px;
+  gap: 10px;
 }
 
 .member__icon {
-    width: 30px;
-    height: 30px;
-    background-color: #ccc;
-    border-radius: 50%; 
+  width: 30px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 50%;
 }
 
 .member__add-btn {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .member__info img {
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
 }
 
 .location {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px; 
-    gap: 32px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  gap: 32px;
 }
 
 .select-location {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  gap: 10px;
 }
 
 .select-location__input {
-    width: 372px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 5px;
-    font-size: 18px;
-    box-sizing: border-box;
+  width: 372px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 18px;
+  box-sizing: border-box;
 }
 
 .submit {
-    padding: 10px 20px;
-    border-radius: 30px;
-    width: 200px;
-    border: none;
-    cursor: pointer;
-    background-color: #1A73E8;
-    color: whitesmoke;
-    transition: background-color 0.3s;
+  padding: 10px 20px;
+  border-radius: 30px;
+  width: 200px;
+  border: none;
+  cursor: pointer;
+  background-color: #1A73E8;
+  color: whitesmoke;
+  transition: background-color 0.3s;
 }
 
 .submit:hover {
-    background-color: #1c7bf7;
+  background-color: #1c7bf7;
+}
+
+#restaurant-filter-form {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.features select,
+.cuisine select {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  background-color: white;
+  color: #333;
+  appearance: none;
+}
+
+.features select:focus,
+.cuisine select:focus {
+  outline: none;
+  border-color: #1A73E8;
 }
