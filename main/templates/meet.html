@@ -13,47 +13,49 @@
 {% block content %}
     {% include "nav.html" %}
     <main>
-        <div class="main__container">
+        <div class="page__content">
             {% include "header.html" %}
-            <div class="content">
-                <div class="create-meet__header">
-                    <div class="create-meet__container">
-                        <div class="create-meet__title">
-                            <img src="{% static 'resources/arrow.svg' %}" alt=""/>
-                            <div class="create-meet__icon"></div>
-                            <div class="create-meet__info">
-                                <h2>Название</h2>
-                                <h4>1 участник</h4>
+            <div class="page__content-main">
+                <div class="page__content-main-container">
+                    <div class="create-meet__header">
+                        <div class="create-meet__container">
+                            <div class="create-meet__title">
+                                <img src="{% static 'resources/arrow.svg' %}" alt=""/>
+                                <div class="create-meet__icon"></div>
+                                <div class="create-meet__info">
+                                    <h2>Название</h2>
+                                    <h4>1 участник</h4>
+                                </div>
                             </div>
-                        </div>
-                        <button class="delete-btn">
-                            <img src="{% static 'resources/delete.svg' %}" alt="" />
-                            <div class="delete-btn__text">Удалить</div>
-                        </button>
-                    </div>
-                </div>
-                <div class="create-meet__body">
-                    <div class="members">
-                        <h2>Участники</h2>
-                        <div class="member">
-                            <div class="member__info">
-                                <div class="member__icon"></div>
-                                <div class="member__name"><p>Name</p></div>
-                                <img src="{% static 'resources/close.svg' %}" alt="" />
-                            </div>
-                            <div class="member__add-btn">
-                                <img src="{% static 'resources/add.svg' %}" alt="" />
-                            </div>
+                            <button class="delete-btn">
+                                <img src="{% static 'resources/delete.svg' %}" alt="" />
+                                <div class="delete-btn__text">Удалить</div>
+                            </button>
                         </div>
                     </div>
-                    <div class="location">
-                        <h2>Местоположение</h2>
-                        <div class="select-location">
-                            <img src="{% static 'resources/location.svg' %}" alt="" />
-                            <input class="select-location__input" placeholder="Укажите пункт отправления">
+                    <div class="create-meet__body">
+                        <div class="members">
+                            <h2>Участники</h2>
+                            <div class="member">
+                                <div class="member__info">
+                                    <div class="member__icon"></div>
+                                    <div class="member__name"><p>Name</p></div>
+                                    <img src="{% static 'resources/close.svg' %}" alt="" />
+                                </div>
+                                <div class="member__add-btn">
+                                    <img src="{% static 'resources/add.svg' %}" alt="" />
+                                </div>
+                            </div>
                         </div>
+                        <div class="location">
+                            <h2>Местоположение</h2>
+                            <div class="select-location">
+                                <img src="{% static 'resources/location.svg' %}" alt="" />
+                                <input class="select-location__input" placeholder="Укажите пункт отправления">
+                            </div>
+                        </div>
+                        <button class="submit">Подобрать</button>
                     </div>
-                    <button class="submit">Подобрать</button>
                 </div>
             </div>
         </div>
