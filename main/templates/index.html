@@ -1,0 +1,49 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}Главная{% endblock %}
+
+{% block styles %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static  'css/index.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/scroll.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/account_menu.css' %}"/>
+{% endblock %}
+
+{% block content %}
+    {% include "nav.html" %}
+    <main>
+        <div class="page__content">
+            {% include "header.html" %}
+            <div class="page__content-main">
+                <div class="page__content-main-container">
+                    <div class="page__main">
+                        <div class="page__main-module">
+                            <div class="page__main-info">
+                                <div class="page__main-title">
+                                    Открой новые эмоции вместе с нами
+                                </div>
+                                <div class="page__main-subtitle">
+                                    Создано компанией название
+                                </div>
+                            </div>
+                            <div class="page__main-actions">
+                                <button class="page__main-join" type="button">Присоединиться</button>
+                                <button class="page__main-create" type="button">Создать</button>
+                            </div>
+                        </div>
+                        <div class="page__main-image">
+                            <img src="{% static 'resources/home_image.png' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="place__content">
+                    <!-- Здесь должны распалагаться карточки мест -->
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'js/account_menu.js' %}"></script>
+{% endblock %}
