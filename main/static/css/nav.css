@@ -1,0 +1,158 @@
+nav {
+    height: 100%;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-no_open {
+    width: auto;
+}
+
+.nav-open {
+    width: 260px;
+}
+
+#menu {
+    width: auto;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 6px;
+}
+
+.menu__container {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 4px;
+
+    transition: var(--transition);
+    border-radius: var(--base_border_radius);
+    color: var(--dark_color_font);
+
+    user-select: none;
+}
+
+.menu__container:hover {
+    background-color: var(--nav_noactive_background_color);
+}
+
+.nav__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.nav__item,
+.nav__link {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav__item {
+    transition: var(--transition);
+    border-radius: var(--base_border_radius);
+
+    flex-direction: column;
+}
+
+.nav__link {
+    padding: 8px 12px;
+    text-decoration: none;
+    color: var(--dark_color_font);
+}
+
+.nav__link:hover {
+    color: var(--dark_color_font);
+}
+
+.nav__img__container {
+    width: auto;
+    height: auto;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    user-select: none;
+}
+
+.title {
+    padding-left: 16px;
+    font-weight: 500;
+}
+
+.meet__header {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding: 8px 12px;
+    text-decoration: none;
+    color: var(--dark_color_font);
+}
+
+.meets {
+    width: auto;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: auto;
+
+    border-radius: 100%;
+    transition: var(--transition);
+
+    user-select: none;
+}
+
+.meets_icon-open {
+    transform: rotate(90deg);
+}
+
+.meets:hover {
+    background-color: #dde9f2;
+    cursor: pointer;
+}
+
+.meets__nav-open {
+    display: flex;
+}
+
+.meets__nav-close {
+    display: none;
+}
+
+.meets__list {
+    list-style: none;
+}
+
+.close {
+    display: none;
+}
+
+.active {
+    background-color: var(--nav_active_background_color);
+}
+
+.noactive:hover {
+    background-color: var(--nav_noactive_background_color);
+}

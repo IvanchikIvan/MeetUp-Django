@@ -1,0 +1,217 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}Встреча{% endblock %}
+
+{% block styles %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}" />
+<<<<<<< HEAD
+<link rel="stylesheet" href="{% static 'css/nav.css' %}" />
+<link rel="stylesheet" href="{% static 'css/scroll.css' %}" />
+<link rel="stylesheet" href="{% static 'css/meet.css' %}" />
+<link rel="stylesheet" href="{% static 'css/account_menu.css' %}" />
+<link rel="stylesheet" href="{% static 'css/dialog.css' %}" />
+=======
+<link rel="stylesheet" href="{% static 'css/scroll.css' %}" />
+<link rel="stylesheet" href="{% static 'css/meet.css' %}" />
+<link rel="stylesheet" href="{% static 'css/account_menu.css' %}" />
+>>>>>>> 98fd232f868e088baf30d1c41b8f43f1ab3cd5cc
+{% endblock %}
+
+{% block content %}
+{% include "nav.html" %}
+<main>
+    <div class="page__content">
+        {% include "header.html" %}
+        <div class="page__content-main">
+            <div class="page__content-main-container">
+                <div class="create-meet__header">
+                    <div class="create-meet__container">
+                        <div class="create-meet__title">
+<<<<<<< HEAD
+                            {% for user in users %}
+                            <p>{{ user }}</p>
+                            {% endfor %}
+                            <img src="{% static 'resources/arrow.svg' %}" alt="" />
+                            <div class="create-meet__icon"></div>
+                            <div class="create-meet__info">
+                                <h2>{{ meet.name }}</h2>
+=======
+                            <img src="{% static 'resources/arrow.svg' %}" alt="" />
+                            <div class="create-meet__icon"></div>
+                            <div class="create-meet__info">
+                                <h2>Название</h2>
+>>>>>>> 98fd232f868e088baf30d1c41b8f43f1ab3cd5cc
+                                <h4>1 участник</h4>
+                            </div>
+                        </div>
+                        <button class="delete-btn">
+                            <img src="{% static 'resources/delete.svg' %}" alt="" />
+                            <div class="delete-btn__text">Удалить</div>
+                        </button>
+                    </div>
+                </div>
+                <div class="create-meet__body">
+<<<<<<< HEAD
+                    <form id="restaurant-filter-form" method="POST">
+                        {% csrf_token %}
+                        <div class="features">
+                            <h2>Особенности</h2>
+                            {% for feature in features %}
+                            <label class="checkbox-container">
+                                <input type="checkbox" name="features" value="{{ feature }}">
+                                <span class="checkbox-custom"></span>
+                                <span class="checkbox-label">{{ feature }}</span>
+                            </label>
+                            {% endfor %}
+                        </div>
+                        <div class="cuisine">
+                            <h2>Кухня</h2>
+                            {% for cuisine in cuisines %}
+                            <label class="checkbox-container">
+                                <input type="checkbox" name="cuisines" value="{{ cuisine }}">
+                                <span class="checkbox-custom"></span>
+                                <span class="checkbox-label">{{ cuisine }}</span>
+                            </label>
+                            {% endfor %}
+
+                        </div>
+=======
+                    <form id="restaurant-filter-form">
+                        <div class="features">
+                            <h2>Особенности</h2>
+                            <select name="features">
+                                {% for feature in features %}
+                                <option value="{{ feature }}">{{ feature }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="cuisine">
+                            <h2>Кухня</h2>
+                            <select name="cuisine">
+                                {% for cuisine in cuisines %}
+                                <option value="{{ cuisine }}">{{ cuisine }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+>>>>>>> 98fd232f868e088baf30d1c41b8f43f1ab3cd5cc
+                        <button type="submit" class="submit">Подобрать</button>
+                    </form>
+                    <div class="members">
+                        <h2>Участники</h2>
+<<<<<<< HEAD
+                        {% for participant in participants %}
+                        <div class="member">
+                            <div class="member__info">
+                                <div class="member__icon"></div>
+                                <div class="member__name">
+                                    <p>{{ participant.username }}</p>
+                                </div>
+                                <button class="remove-user-btn" data-user-id="{{ participant.id }}"><img
+                                        src="{% static 'resources/close.svg' %}" alt="" /></button>
+                            </div>
+                        </div>
+                        {% endfor %}
+=======
+>>>>>>> 98fd232f868e088baf30d1c41b8f43f1ab3cd5cc
+                        <div class="member">
+                            <div class="member__info">
+                                <div class="member__icon"></div>
+                                <div class="member__name">
+                                    <p>Name</p>
+                                </div>
+                                <img src="{% static 'resources/close.svg' %}" alt="" />
+                            </div>
+<<<<<<< HEAD
+                        </div>
+                        <button class="page__main-create" type="button" id="open-dialog-btn"><img
+                                src="{% static 'resources/add.svg' %}" alt="" /></button>
+                        <div id="dialog-overlay">
+                            <div id="dialog-box">
+                                <h2>Добавить участника</h2>
+                                <form method="POST">
+                                    {% csrf_token %}
+                                    <input id="meet_name" type="text" placeholder="Email" name="email">
+                                    <button id="create_meet" type="submit">Добавить</button>
+                                </form>
+                                <button id="close-dialog-btn">Закрыть</button>
+=======
+                            <div class="member__add-btn">
+                                <img src="{% static 'resources/add.svg' %}" alt="" />
+>>>>>>> 98fd232f868e088baf30d1c41b8f43f1ab3cd5cc
+                            </div>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <h2>Местоположение</h2>
+                        <div class="select-location">
+                            <img src="{% static 'resources/location.svg' %}" alt="" />
+                            <input class="select-location__input" placeholder="Укажите пункт отправления">
+                        </div>
+                    </div>
+<<<<<<< HEAD
+=======
+                    <button class="submit">Подобрать</button>
+>>>>>>> 98fd232f868e088baf30d1c41b8f43f1ab3cd5cc
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<<<<<<< HEAD
+<script>
+    let openDialogBtn = document.getElementById("open-dialog-btn");
+    let closeDialogBtn = document.getElementById("close-dialog-btn");
+    let dialogOverlay = document.getElementById("dialog-overlay");
+
+    openDialogBtn.addEventListener("click", function () {
+        dialogOverlay.style.display = "flex";
+    });
+
+    closeDialogBtn.addEventListener("click", function () {
+        dialogOverlay.style.display = "none";
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const removeUserButtons = document.querySelectorAll(".remove-user-btn");
+        removeUserButtons.forEach(button => {
+            button.addEventListener("click", function () {
+                const userId = button.getAttribute("data-user-id");
+                const meet_id = "{{ meet_id }}";
+
+                fetch(`/meet/${meet_id}/remove_user/${userId}/`, {
+                    method: 'POST',
+                    headers: {
+                        'X-CSRFToken': "{{ csrf_token }}",
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ userId: userId })
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            window.location.reload();
+                        } else {
+                            console.error('Failed to remove user');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+            });
+        });
+    });
+
+</script>
+
+{% endblock %}
+{% block scripts %}
+<script src="{% static 'js/account_menu.js' %}"></script>
+=======
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'js/account_menu.js' %}"></script>
+<script src="{% static 'js/create_meet.js' %}"></script>
+>>>>>>> 98fd232f868e088baf30d1c41b8f43f1ab3cd5cc
+{% endblock %}

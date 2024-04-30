@@ -1,0 +1,204 @@
+#account__menu {
+    position: absolute;
+    width: auto;
+    height: auto;
+    max-width: 360px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+<<<<<<< HEAD
+
+    right: 0;
+    top: 64px;
+
+    background-color: #edf2f7;
+=======
+    
+    right: 0;
+    top: 64px;
+
+    background-color: #EDF2F7;
+>>>>>>> 98fd232f868e088baf30d1c41b8f43f1ab3cd5cc
+    border-radius: 24px;
+    padding: 24px 48px;
+    z-index: 2024;
+    opacity: 0;
+    visibility: hidden;
+
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    transition: opacity 0.1s ease 0.02s;
+}
+
+#account__menu.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.account__title {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    text-size-adjust: 100%;
+    pointer-events: none;
+}
+
+.account__email {
+    margin: 2px 64px;
+
+    font-size: 1rem;
+    line-height: 1.25rem;
+    letter-spacing: normal;
+    font-weight: 500;
+    text-overflow: ellipsis;
+
+    color: #1f1f1f;
+<<<<<<< HEAD
+    transition: opacity 0.15s;
+=======
+    transition: opacity .15s;
+>>>>>>> 98fd232f868e088baf30d1c41b8f43f1ab3cd5cc
+}
+
+.account__close {
+    width: auto;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 100%;
+    border: none;
+
+    color: #444746;
+    background-color: transparent;
+    cursor: pointer;
+    outline: 0;
+
+    padding: 8px;
+
+    position: absolute;
+    right: 16px;
+    top: 16px;
+
+    z-index: 2;
+<<<<<<< HEAD
+    transition: var(--transition);
+=======
+    transition: .16s;
+>>>>>>> 98fd232f868e088baf30d1c41b8f43f1ab3cd5cc
+    user-select: none;
+}
+
+.account__close:hover {
+<<<<<<< HEAD
+    background-color: #dbe0e7;
+=======
+    background-color: #DBE0E7;
+>>>>>>> 98fd232f868e088baf30d1c41b8f43f1ab3cd5cc
+}
+
+.close_elem {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+<<<<<<< HEAD
+.account__manage,
+.account__logout {
+=======
+.account__manage, .account__logout {
+>>>>>>> 98fd232f868e088baf30d1c41b8f43f1ab3cd5cc
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+<<<<<<< HEAD
+.account__manage-link,
+.account__logout-link {
+=======
+.account__manage-link, .account__logout-link {
+>>>>>>> 98fd232f868e088baf30d1c41b8f43f1ab3cd5cc
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+}
+
+.account__manage_contatiner {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 8px 16px;
+    border-radius: 24px;
+    border: 0.5px solid #999999;
+}
+
+.account__manage-text {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: rgba(26, 115, 232, 0.9);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> 98fd232f868e088baf30d1c41b8f43f1ab3cd5cc
+.account__logout_container {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    padding: 8px 16px;
+    gap: 8px;
+
+    border-radius: 24px;
+<<<<<<< HEAD
+    border: 0.5px solid #f8fafd;
+    background-color: #f8fafd;
+=======
+    border: 0.5px solid #F8FAFD;
+    background-color: #F8FAFD;
+>>>>>>> 98fd232f868e088baf30d1c41b8f43f1ab3cd5cc
+}
+
+.account__logout_container > img {
+    user-select: none;
+}
+
+.account__logout-text {
+    color: rgba(28, 28, 28, 0.9);
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+}

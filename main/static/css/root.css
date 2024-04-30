@@ -1,0 +1,28 @@
+:root {
+<<<<<<< HEAD
+    --dark_color_font: #1c1c1e;
+    --main_color_blue: #1a73e8;
+    --hover_color_blue: #357ae8;
+    --page_background_color: #f6f8fc;
+    --nav_active_background_color: #cbf0f8;
+    --nav_noactive_background_color: #edf2f7;
+    --input_background_color: #f3f7fc;
+    --icon_background_color: #f3f7fc;
+    --log_background_color: #f3f7fc;
+    --title_background_color: rgba(81, 81, 81, 0.9);
+    --border_color: #999999;
+    --button_hover_color: #def1ff;
+    --transition: 0.16s;
+    --page_padding: 24px 16px 16px 0;
+    --header_padding: 24px 24px;
+=======
+    --dark_color_font: #1C1C1E;
+    --page_background_color: #F6F8FC;
+    --nav_active_background_color: #CBF0F8;
+    --nav_noactive_background_color: #EDF2F7;
+    --input_background_color: #F3F7FC;
+    --icon_background_color: #F3F7FC;
+    --page_padding: 24px 16px 16px 0;
+>>>>>>> 98fd232f868e088baf30d1c41b8f43f1ab3cd5cc
+    --base_border_radius: 24px;
+}
