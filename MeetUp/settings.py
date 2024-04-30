@@ -24,10 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-t55hfa!ujt$5p#d&&t@qrm)#9w1o=x-u44@ypr7uz=-+3wsy0m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
 
 # Application definition
 
@@ -38,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app',
+    'main',
 ]
 
 MIDDLEWARE = [
@@ -51,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'MeetUp.urls'
+ROOT_URLCONF = 'meetup.urls'
 
 TEMPLATES = [
     {
@@ -69,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'MeetUp.wsgi.application'
+WSGI_APPLICATION = 'meetup.wsgi.application'
 
 
 # Database
@@ -118,12 +117,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = '/main/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'app/static'),
+    os.path.join(BASE_DIR, 'main/static'),
 ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_PROFILE_MODULE = "main.UserProfile"

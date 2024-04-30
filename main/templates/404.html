@@ -1,0 +1,27 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}
+    Главная
+{% endblock %}
+
+{% block styles %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/404.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/scroll.css' %}"/>
+{% endblock %}
+
+{% block content %}
+    <main>
+        <div class="main__container">
+            <div class="content">
+                <div class="content__spacer"></div>
+                <h1 class="content__title">404</h1>
+                <h2 class="content__subtitle">Страница не найдена</h2>
+                <h3 class="content__message">Возможно, страница, которую вы ищете, была удалена, ее название изменилось или она временно недоступна</h3>
+                <a href="/" class="content__link">Вернуться на главную</a>
+            </div>
+        </div>
+    </main>
+{% endblock %}

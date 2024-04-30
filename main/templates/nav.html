@@ -1,0 +1,66 @@
+{% load static %}
+
+<nav id="nav" class="no_open">
+    <div id="menu">
+        <div class="menu__container">
+            <img src="{% static 'resources/menu.svg' %}" alt="Меню">
+        </div>
+    </div>
+    <ul class="nav__list">
+        <li class="nav__item active">
+            <a class="nav__link" href="/">
+                <div class="nav__img__container">
+                    <img src="{% static 'resources/home.svg' %}" alt="Главная">
+                </div>
+                <div class="title close">
+                    Главная
+                </div>
+            </a>
+        </li>
+        <li class="nav__item noactive">
+            <a class="nav__link" href="{% url 'places' %}">
+                <div class="nav__img__container">
+                    <img src="{% static 'resources/place.svg' %}" alt="Все места">
+                </div>
+                <div class="title close">
+                    Все места
+                </div>
+            </a>
+        </li>
+        <li class="nav__item noactive">
+            <div class="meet__header">
+                <div class="nav__img__container">
+                    <img src="{% static 'resources/groups.svg' %}" alt="Встречи">
+                </div>
+                <div class="title close">
+                    Встречи
+                </div>
+                <div class="meets close" id="meets_icon">
+                    <img src="{% static 'resources/drop_down.svg' %}" alt="">
+                </div>
+            </div>
+            <div id="meets__nav" class="meets__nav-close">
+                <ul class="meets__list">
+                    {% for meet in meets %}
+                        <li class="meets__item">
+                            <a href="/meet/{{ meet.id }}">
+                                <div class="meet__title">{{ meet.name }}</div>
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </li>
+        <li class="nav__item noactive">
+            <a class="nav__link" href="{% url 'history' %}">
+                <div class="nav__img__container">
+                    <img src="{% static 'resources/history.svg' %}" alt="История">
+                </div>
+                <div class="title close">
+                    История
+                </div>
+            </a>
+        </li>
+    </ul>
+</nav>
+<script src="{% static 'js/nav.js' %}"></script>

@@ -1,0 +1,29 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}Все места{% endblock %}
+
+{% block styles %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static  'css/index.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/scroll.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/account_menu.css' %}"/>
+{% endblock %}
+
+{% block content %}
+    {% include "nav.html" %}
+    <main>
+        <div class="page__content">
+            {% include "header.html" %}
+            <div class="page__content-main">
+                <div class="page__content-main-container">
+
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'js/account_menu.js' %}"></script>
+{% endblock %}
